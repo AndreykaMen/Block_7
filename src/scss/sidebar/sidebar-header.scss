@@ -5,6 +5,7 @@
   align-items: center;
   padding: 14px;
   #sidebar-hidden__closed{
+
     @media only screen and (min-width: 768px) {
       display: none;
     }

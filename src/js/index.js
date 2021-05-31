@@ -56,6 +56,20 @@ function initSwiper() {
 
 initSwiper();
 
+const anchors = document.querySelectorAll('.content-menu__link');
+for (let key of anchors) {
+  key.addEventListener('click', function (e) {
+    const blockID = key.getAttribute('href');
+    if (key.hash) {
+      e.preventDefault()
+      document.querySelector(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  })
+}
+
 const fadeSidebar = document.querySelector(".fade-sidebar");
 
 
@@ -63,6 +77,7 @@ function getModalOpen(id) {
   fadeSidebar.style.display = 'block';
   document.getElementById(id).style.right = '0';
 }
+
 function getModalClose(id) {
   fadeSidebar.style.display = 'none';
   document.getElementById(id).style.right = '-550px';
@@ -80,12 +95,14 @@ function getSaidBarClose(id) {
 
 
 document.onclick = function (e) {
-  console.log(e.target)
   let target = e.target;
+
   if (target.id === "button-message" || target.id === "button-message--clone") {
+    getSaidBarClose("sidebar-hidden");
     getModalOpen('modal-message');
   }
   if (target.id === "button-tel" || target.id === "button-tel--clone") {
+    getSaidBarClose("sidebar-hidden");
     getModalOpen('modal-tel');
   }
   if (target.id === "modal-message__closed-button" || target.className === "fade-sidebar") {
@@ -105,7 +122,7 @@ document.onclick = function (e) {
     let status = target.dataset.status;
     if (status === "false") {
       let id = target.dataset.catopen;
-      if(document.body.clientWidth <= 768) {
+      if (document.body.clientWidth <= 768) {
         document.getElementById(id).style.height = "528px";
         target.textContent = 'Скрыть все';
         target.classList.add('more-link--rotate');
@@ -118,12 +135,14 @@ document.onclick = function (e) {
       }
     } else {
       let id = target.dataset.catopen;
-        document.getElementById(id).style.height = "175px";
-        target.textContent = 'Показать все';
-        target.classList.remove('more-link--rotate');
-        status = target.dataset.status = "false";
+      document.getElementById(id).style.height = "175px";
+      target.textContent = 'Показать все';
+      target.classList.remove('more-link--rotate');
+      status = target.dataset.status = "false";
     }
   }
 }
+
+
 
 

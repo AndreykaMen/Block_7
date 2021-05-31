@@ -10,83 +10,7 @@
 <body>
 <div class="page container">
   <div class="fade-sidebar"></div>
-  <div class="modal" id="modal-message">
-    <span id="modal-message__closed-button" class="modal__closed button-circle button-circle--ic-closed effect--drop-shadow_shaking"></span>
-    <div class="modal__title-wrapper">
-      <h2 class="modal__title">
-        <span class="header__border-icon modal__title-icon"></span>
-        Обратная связь
-      </h2>
-    </div>
-    <form class="contact-form" method="POST" action="#" name="form-message">
-      <div class="contact-form__input-wrapper">
-        <label>
-          <input name="name" type="text" class="contact-form__input"
-                 placeholder="Имя" required
-          >
-        </label>
-      </div>
-      <div class="contact-form__input-wrapper">
-        <label>
-          <input name="tel" type="tel" class="contact-form__input"
-                 placeholder="Телефон" required minlength="6" maxlength="18"
-          >
-        </label>
-      </div>
-      <div class="contact-form__input-wrapper">
-        <label>
-          <input name="email" type="email" class="contact-form__input"
-                 placeholder="Электронная почта" required
-          >
-        </label>
-      </div>
-      <div class="contact-form__input-wrapper">
-        <label>
-          <textarea name="message" type="textarea" class="contact-form__input contact-form__input--textarea" placeholder="Сообщение"></textarea>
-        </label>
-      </div>
-        <div class="contact-form__description-wrapper">
-        <p class="contact-form__description">
-          Нажимая “отправить”, вы даете согласие
-          <a href="#" class="contact-form__description-link">на обработку персональных данных</a> и
-          соглашаетесь с
-          нашей <a href="#" class="contact-form__description-link">политикой конфиденциальности</a>
-        </p>
-      </div>
-        <div class="contact-form__button-wrapper">
-          <button class="contact-form__button table__btn effect--tableBtn_box-shadow" type="submit">Отправить</button>
-        </div>
-    </form>
-  </div>
-  <div class="modal" id="modal-tel">
-    <span id="modal-tel__closed-button" class="modal__closed button-circle button-circle--ic-closed effect--drop-shadow_shaking"></span>
-    <div class="modal__title-wrapper">
-      <h2 class="modal__title">
-        <span class="header__border-icon modal__title-icon"></span>
-        Заказать звонок
-      </h2>
-    </div>
-    <form class="contact-form" method="POST" action="#" name="form-tel">
-      <div class="contact-form__input-wrapper">
-        <label>
-          <input name="tel" type="tel" class="contact-form__input"
-                 placeholder="Телефон" required minlength="6" maxlength="18"
-          >
-        </label>
-      </div>
-      <div class="contact-form__description-wrapper">
-        <p class="contact-form__description">
-          Нажимая “отправить”, вы даете согласие
-          <a href="#" class="contact-form__description-link">на обработку персональных данных</a> и
-          соглашаетесь с
-          нашей <a href="#" class="contact-form__description-link">политикой конфиденциальности</a>
-        </p>
-      </div>
-      <div class="contact-form__button-wrapper">
-        <button class="contact-form__button table__btn effect--tableBtn_box-shadow" type="submit">Отправить</button>
-      </div>
-    </form>
-  </div>
+
   <aside class="sidebar" id="sidebar-hidden">
     <div class="sidebar-header">
       <span class="button-circle button-circle--ic-closed" id="sidebar-hidden__closed"></span>
@@ -176,7 +100,7 @@
           </a>
         </div>
       </div>
-      <nav class="content-menu">
+      <nav class="content-menu" id="content-menu--option">
         <a href="#category-brand" class="content-menu__link">Ремонтируемые бренды</a>
         <a href="#category-other" class="content-menu__link">Дополнительные услуги</a>
         <a href="#category-price" class="content-menu__link">Цены на услуги</a>
@@ -739,6 +663,83 @@
       </div>
     </footer>
   </section>
+  <div class="modal" id="modal-message">
+    <span id="modal-message__closed-button" class="modal__closed button-circle button-circle--ic-closed effect--drop-shadow_shaking"></span>
+    <div class="modal__title-wrapper">
+      <h2 class="modal__title">
+        <span class="header__border-icon modal__title-icon"></span>
+        Обратная связь
+      </h2>
+    </div>
+    <form class="contact-form" method="POST" action="#" name="form-message">
+      <div class="contact-form__input-wrapper">
+        <label>
+          <input name="name" type="text" class="contact-form__input"
+                 placeholder="Имя" required
+          >
+        </label>
+      </div>
+      <div class="contact-form__input-wrapper">
+        <label>
+          <input name="tel" type="tel" class="contact-form__input"
+                 placeholder="Телефон" required minlength="6" maxlength="18"
+          >
+        </label>
+      </div>
+      <div class="contact-form__input-wrapper">
+        <label>
+          <input name="email" type="email" class="contact-form__input"
+                 placeholder="Электронная почта" required
+          >
+        </label>
+      </div>
+      <div class="contact-form__input-wrapper">
+        <label>
+          <textarea name="message" type="textarea" class="contact-form__input contact-form__input--textarea" placeholder="Сообщение"></textarea>
+        </label>
+      </div>
+      <div class="contact-form__description-wrapper">
+        <p class="contact-form__description">
+          Нажимая “отправить”, вы даете согласие
+          <a href="#" class="contact-form__description-link">на обработку персональных данных</a> и
+          соглашаетесь с
+          нашей <a href="#" class="contact-form__description-link">политикой конфиденциальности</a>
+        </p>
+      </div>
+      <div class="contact-form__button-wrapper">
+        <button class="contact-form__button table__btn effect--tableBtn_box-shadow" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
+  <div class="modal" id="modal-tel">
+    <span id="modal-tel__closed-button" class="modal__closed button-circle button-circle--ic-closed effect--drop-shadow_shaking"></span>
+    <div class="modal__title-wrapper">
+      <h2 class="modal__title">
+        <span class="header__border-icon modal__title-icon"></span>
+        Заказать звонок
+      </h2>
+    </div>
+    <form class="contact-form" method="POST" action="#" name="form-tel">
+      <div class="contact-form__input-wrapper">
+        <label>
+          <input name="tel" type="tel" class="contact-form__input"
+                 placeholder="Телефон" required minlength="6" maxlength="18"
+          >
+        </label>
+      </div>
+      <div class="contact-form__description-wrapper">
+        <p class="contact-form__description">
+          Нажимая “отправить”, вы даете согласие
+          <a href="#" class="contact-form__description-link">на обработку персональных данных</a> и
+          соглашаетесь с
+          нашей <a href="#" class="contact-form__description-link">политикой конфиденциальности</a>
+        </p>
+      </div>
+      <div class="contact-form__button-wrapper">
+        <button class="contact-form__button table__btn effect--tableBtn_box-shadow" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
 </div>
 </body>
 </html>
