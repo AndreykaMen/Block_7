@@ -878,9 +878,9 @@ template {
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-width: 320px;
-  height: 100vh;
+  height: 100%;
   background-color: #fff;
   transition: linear 0.5s; }
   @media only screen and (max-width: 768px) {
@@ -939,6 +939,7 @@ template {
       color: #7E7E82; }
 
 .contact {
+  margin-top: 80px;
   padding: 14px; }
   .contact__row {
     display: flex; }
