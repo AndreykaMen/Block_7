@@ -896,6 +896,9 @@ template {
   justify-content: space-between;
   align-items: center;
   padding: 14px; }
+  @media only screen and (min-width: 768px) {
+    .sidebar-header #sidebar-hidden__closed {
+      display: none; } }
 
 .logo {
   margin-right: 70px; }
@@ -1503,10 +1506,6 @@ template {
 .button-circle--ic-burger:after {
   background-image: url(./static/menu-burger.svg);
   background-position: 10px 10px; }
-
-@media only screen and (min-width: 768px) {
-  .button-circle--ic-closed {
-    display: none; } }
 
 .button-circle--ic-closed:after {
   background-image: url(./static/ic_closed.svg);
