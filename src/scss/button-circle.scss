@@ -75,9 +75,7 @@
 }
 
 .button-circle--ic-closed {
-  @media only screen and (min-width: 768px) {
-    display: none;
-  }
+
 
   &:after {
     @include icon('../img/ic_closed.svg', 10px, 10px);

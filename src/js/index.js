@@ -63,7 +63,6 @@ function getModalOpen(id) {
   fadeSidebar.style.display = 'block';
   document.getElementById(id).style.right = '0';
 }
-
 function getModalClose(id) {
   fadeSidebar.style.display = 'none';
   document.getElementById(id).style.right = '-550px';
@@ -81,7 +80,7 @@ function getSaidBarClose(id) {
 
 
 document.onclick = function (e) {
-
+  console.log(e.target)
   let target = e.target;
   if (target.id === "button-message" || target.id === "button-message--clone") {
     getModalOpen('modal-message');
