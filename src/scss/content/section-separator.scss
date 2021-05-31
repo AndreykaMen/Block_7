@@ -1,0 +1,13 @@
+
+.section-separator {
+  border-top: 1px solid $border-separator;
+
+  &__title {
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    padding: 14px 30px;
+    @include font(1rem, $text-second, $family-regular);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+  }
+}

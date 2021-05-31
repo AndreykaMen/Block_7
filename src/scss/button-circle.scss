@@ -1,0 +1,86 @@
+.button-circle {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  line-height: 40px;
+
+  &:after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 50%;
+    display: block;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background-color: $ic_circle_color;
+    margin: 6px;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  &__text {
+    margin: 6px;
+    @include font(1rem, $text-main, $family-medium);
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.button-circle--ic-tools {
+  &:after {
+    @include icon('../img/ic_tools.svg', 10px, 10px);
+
+
+  }
+}
+
+.button-circle--ic-status {
+  &:after {
+    @include icon('../img/ic_status.svg', 10px, 8px);
+  }
+}
+
+.button-circle--ic-search {
+  &:after {
+    @include icon('../img/search.svg', 10px, 10px);
+
+
+  }
+}
+
+.button-circle--ic-tel {
+  &:after {
+    @include icon('../img/ic_tel.svg', 9px, 9px);
+  }
+}
+
+.button-circle--ic-message {
+  &:after {
+    @include icon('../img/ic_message.svg', 9px, 9px);
+  }
+}
+
+.button-circle--ic-user {
+  &:after {
+    @include icon('../img/ic_user.svg', 9px, 9px);
+  }
+}
+
+.button-circle--ic-burger {
+  &:after {
+    @include icon('../img/menu-burger.svg', 10px, 10px);
+  }
+}
+
+.button-circle--ic-closed {
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &:after {
+    @include icon('../img/ic_closed.svg', 10px, 10px);
+  }
+
+}

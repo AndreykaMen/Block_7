@@ -1,0 +1,118 @@
+
+.effect--drop-shadow_shaking {
+  transition: 0.2s;
+
+  &:hover {
+    filter: drop-shadow(4px 4px 2px #ccc);
+    transform: scale(1.1);
+
+    &:after {
+      animation-name: shaking;
+      animation-duration: 400ms;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &:active {
+    filter: drop-shadow(0 0 0 #ccc);
+
+    &:after {
+      transform: scale(1.1);
+      border: 2px solid #dc1f597a;
+    }
+  }
+}
+
+
+@keyframes shaking {
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.effect--ding {
+  &:hover {
+    animation-name: ding;
+    animation-duration: 200ms;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes ding {
+  50% {
+    transform: translateX(5px) rotate(-2deg);
+
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+.effect--letterSpacing {
+  &:hover {
+    animation-name: letterSpace;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes letterSpace {
+
+  50% {
+    letter-spacing: 12px;
+
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+
+.effect--drop-shadow_scale {
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.5);
+    text-shadow: 0 0 11px #e8105199;
+  }
+}
+
+.effect--cat_drop-shadow_bg-fill {
+  transition: ease 0.2s;
+
+  &:hover {
+    filter: drop-shadow(4px 4px 2px #b7b7b79e);
+    background-image: linear-gradient(#fff 0%, #fff 35%, #fff 50%, #fff 51%, #fff 100%);
+  }
+
+  &:hover > .button-category__icon {
+    &:before {
+      background-color: $ic_circle_color;
+      background-image: url(../img/arrow_white_ic.svg);
+    }
+  }
+
+  &:active {
+    filter: drop-shadow(0 0 0 #b7b7b79e);
+    box-shadow: inset 0 0 5px 2px #b7b7b79e;
+  }
+}
+
+.effect--tableBtn_box-shadow {
+  transition: ease 0.2s;
+
+  &:hover {
+    box-shadow: 2px 3px 8px 1px #8a6f6f9e;
+    background-image: linear-gradient(#FF3E79 0%, #f52967 35%, #d80545 50%, #c1174b 51%, #ad4a68 100%);
+  }
+
+  &:active {
+    box-shadow: inset 2px 3px 8px 1px #8a6f6f9e;
+    text-shadow: 1px 3px 0 #8a6f6f9e;
+  }
+}

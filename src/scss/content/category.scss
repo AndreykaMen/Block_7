@@ -1,0 +1,28 @@
+
+.category{
+  padding: 24px;
+  margin-bottom: 20px;
+  @media only screen and (max-width: 440px) {
+    padding: 14px;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 175px;
+    overflow: hidden;
+    transition: linear 0.5s;
+    @media only screen and (max-width: 440px) {
+      display: none;
+    }
+  }
+  &__inner-hidden{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 0;
+    overflow: hidden;
+  }
+
+
+}

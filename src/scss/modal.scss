@@ -1,0 +1,40 @@
+.modal {
+  position: absolute;
+  top: 0;
+  right: -550px;
+  z-index: 9999;
+  background-color: $bg-sidebar;
+  max-width: 440px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
+  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+  transition: linear 0.5s;
+  @media only screen and (max-width: 768px) {
+    padding: 14px;
+  }
+
+  &__closed {
+    position: absolute;
+    left: -70px;
+    top: 15px;
+    @media only screen and (max-width: 440px) {
+      position: static;
+      justify-content: flex-start;
+    }
+  }
+
+  &__title-wrapper {
+    text-align: left;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+  }
+
+  &__title-icon {
+    transform: translate(-23px, 7px);
+  }
+}

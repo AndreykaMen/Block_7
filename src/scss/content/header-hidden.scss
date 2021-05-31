@@ -1,0 +1,40 @@
+.header-hidden {
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+
+  &__inner {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+
+  }
+
+  &__inner-link {
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+
+  &__contact {
+    @extend .header-hidden__inner-link;
+    @media only screen and (max-width: 360px) {
+      display: none;
+    }
+  }
+
+  &__inner-menu {
+    @extend .header-hidden__inner-link;
+  }
+
+  .header__border-icon {
+    transform: translate(0, 10px);
+    background-color: $border-separator-header;
+    margin: 0 7px;
+  }
+}
+

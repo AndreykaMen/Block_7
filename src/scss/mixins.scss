@@ -1,0 +1,19 @@
+@mixin font($size, $color,$family) {
+  font-size: $size;
+  font-family: $family;
+  color: $color;
+}
+
+@mixin circle($size, $bgColor) {
+  display: block;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  text-align: center;
+  background-color: $bgColor;
+}
+
+@mixin icon($url-icon,$bg-positionX,$bg-positionY) {
+  background-image: url($url-icon);
+  background-position: $bg-positionX $bg-positionY;
+}

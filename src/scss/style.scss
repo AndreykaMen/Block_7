@@ -1,0 +1,87 @@
+@import "~normalize.css";
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import '~swiper/swiper-bundle.css';
+
+@import "fade-sidebar";
+@import "sidebar/sidebar";
+@import "sidebar/sidebar-header";
+@import "sidebar/logo";
+@import "sidebar/menu-main";
+@import "sidebar/contact";
+@import "sidebar/feedback";
+@import "sidebar/team-language";
+
+@import "content/content";
+@import "content/header-hidden";
+@import "content/header";
+@import "content/content-menu";
+@import "content/promo";
+@import "content/section-separator";
+@import "content/category";
+@import "content/more-link";
+@import "content/link";
+@import "content/button-category";
+@import "content/table";
+@import "content/table-slide";
+@import "content/info-table";
+@import "content/footer";
+
+@import "effect";
+@import "button-circle";
+@import "modal";
+@import "contact-form";
+
+
+body {
+  padding: 0;
+  @include font(1rem, $text-main, $family-regular);
+}
+
+a {
+  text-decoration: none;
+  color: $text-main;
+}
+
+.swiper-container {
+  display: none;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
+}
+
+#swiper-info .link__text {
+  display: inline-block;
+}
+
+#swiper-info .link__text .link__icon {
+  background-position: 8px 16px;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  @media only screen and (min-width: 1441px) {
+    width: 1440px;
+    margin: 0 auto;
+    border: 1px solid $bg-content;
+  }
+}
+
+
+
+
+
+
+
+
+

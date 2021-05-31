@@ -1,0 +1,16 @@
+.logo {
+  margin-right: 70px;
+  @media only screen and (max-width: 440px) {
+    margin-right: 0;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__image {
+    width: 100px;
+    height: 50px;
+  }
+
+}

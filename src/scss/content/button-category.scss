@@ -1,0 +1,49 @@
+
+
+.button-category {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: $bg-sidebar;
+  box-sizing: border-box;
+  border: 1px solid $border-catalogBtn;
+  border-radius: 6px;
+  min-width: 220px;
+  min-height: 72px;
+  padding: 0 15px;
+  margin-bottom: 16px;
+
+  &--large {
+    padding: 15px;
+  }
+
+  &__label {
+    width: 70%;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 0 10px;
+  }
+
+  &__image {
+    object-fit: scale-down;
+  }
+
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      @include icon('../img/arrow_ic.svg', 16px, 11px);
+      background-size: 30%;
+      background-repeat: no-repeat;
+      @include circle(40px, $bg-sidebar);
+      border: 1px solid $ic_circle_color;
+    }
+    &--position-bottom{
+      align-items: flex-end;
+    }
+  }
+}

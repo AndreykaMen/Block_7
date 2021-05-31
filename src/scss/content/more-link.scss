@@ -1,0 +1,28 @@
+
+.more-link {
+  @include font(1rem, $text-main, $family-medium);
+  transition: 0.2s;
+  cursor: pointer;
+  &--rotate{
+    &:before{
+      transform: rotate(180deg);
+    }
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+    @include icon('../img/arrow.svg', 0, 0);
+    background-size: 100%;
+    margin-right: 15px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: red;
+  }
+}

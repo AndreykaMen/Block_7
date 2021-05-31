@@ -1,0 +1,17 @@
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    margin: 12px;
+
+    &--email {
+      @include font(1rem, $text-main, $family-medium);
+    }
+
+    &--phone {
+      @include font(1.5rem, $text-main, $family-bold);
+    }
+  }
+}

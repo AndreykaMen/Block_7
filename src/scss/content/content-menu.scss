@@ -1,0 +1,37 @@
+
+
+.content-menu {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-top: 20px;
+
+  @media only screen and (max-width: 768px) {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+
+  &__link {
+    padding: 10px 12px;
+    border: 2px solid transparent;
+    color: $text-second;
+    transition: 0.2s;
+    white-space: nowrap;
+    &:hover {
+      border: 2px solid $border-color;
+      border-radius: 6px;
+      background-color: #fff;
+      text-shadow: 1px 1px 0 #1B1C21;
+    }
+
+    &:focus-within {
+      border: 2px solid $border-color;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

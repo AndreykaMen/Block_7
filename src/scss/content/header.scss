@@ -1,0 +1,32 @@
+
+.header {
+  max-width: 100%;
+  padding: 0 30px;
+
+  &--margin-top {
+    margin-top: 14px;
+  }
+  &__border-icon{
+    width: 3px;
+    height: 40px;
+    display: inline-block;
+    background-color: $marker_color;
+    border-radius: 8px;
+    transform: translate(-28px, 7px);
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    &-link {
+      @extend .header__inner;
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    @include font(1.8rem, $text-main, $family-bold);
+    margin: 0;
+  }
+}

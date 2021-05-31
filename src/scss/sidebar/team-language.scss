@@ -1,0 +1,21 @@
+
+.team-language {
+  margin-left: 6px;
+  padding: 14px;
+
+  &__link {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 5px;
+    border: 2px solid transparent;
+    @include font(1rem, $text-main, $family-medium);
+
+    &:hover {
+      color: $text-second;
+    }
+
+    &:focus-within {
+      color: $text-second;
+    }
+  }
+}
