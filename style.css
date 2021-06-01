@@ -937,6 +937,9 @@ template {
       color: #7E7E82; }
     .menu-main__link:focus-within {
       color: #7E7E82; }
+    .menu-main__link:active {
+      color: #FF3E79;
+      text-shadow: 2px 1px 2px #ccc; }
 
 .contact {
   margin-top: 80px;
@@ -1158,6 +1161,9 @@ template {
   .link__text {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 520px) {
+      .link__text {
+        justify-content: center; } }
     .link__text:hover {
       -webkit-filter: drop-shadow(2px 4px 2px #ccc);
               filter: drop-shadow(2px 4px 2px #ccc); }
@@ -1321,18 +1327,18 @@ template {
   font-size: 0.9rem;
   font-family: "TTLakes-Regular", sans-serif;
   color: #1B1C21; }
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 520px) {
     .footer {
       flex-direction: column;
       padding: 14px; } }
   .footer__blocks {
     width: 33%; }
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 520px) {
       .footer__blocks {
         width: 100%; } }
   .footer__copywriter {
     text-align: left; }
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 520px) {
       .footer__copywriter {
         text-align: center; } }
     .footer__copywriter--uppercase {
@@ -1342,7 +1348,7 @@ template {
     text-align: center; }
   .footer__info {
     text-align: right; }
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 520px) {
       .footer__info {
         text-align: center; } }
 
@@ -1365,7 +1371,7 @@ template {
     -webkit-filter: drop-shadow(0 0 0 #ccc);
             filter: drop-shadow(0 0 0 #ccc); }
     .effect--drop-shadow_shaking:active:after {
-      transform: scale(1.1);
+      transform: scale(0.9);
       border: 2px solid #dc1f597a; }
 
 @-webkit-keyframes shaking {
@@ -1468,7 +1474,7 @@ template {
     min-height: 40px;
     border-radius: 50%;
     background-color: #FF3E79;
-    margin: 6px;
+    margin: 5px;
     border: 2px solid transparent;
     cursor: pointer; }
   .button-circle__text {
@@ -1542,7 +1548,7 @@ template {
   .modal__title {
     margin: 0 0 20px; }
   .modal__title-icon {
-    transform: translate(-23px, 7px); }
+    transform: translate(-12px, 7px); }
 
 .contact-form__input {
   box-sizing: border-box;
