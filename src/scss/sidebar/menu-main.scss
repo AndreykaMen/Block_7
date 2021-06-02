@@ -17,9 +17,10 @@
       border-left: 4px solid $marker_color;
       opacity: 0;
       transition: 0.2s;
+
     }
 
-    &:focus-within::before {
+    &:focus-within::before{
       opacity: 1;
     }
 
@@ -37,7 +38,14 @@
 
     &:focus-within {
       color: $text-second;
+      filter: drop-shadow(4px 3px 2px #ccc);
     }
+
+    &:active {
+      color: $ic_circle_color;
+      filter: drop-shadow(4px 4px 2px #ccc);
+    }
+
   }
 
 }
